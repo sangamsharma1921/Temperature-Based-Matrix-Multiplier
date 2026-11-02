@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Temperature-Based Matrix Multiplier</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+<header><div><p class="eyebrow">PBL PROJECT SIMULATOR</p><h1>Temperature-Based Matrix Multiplier</h1><p class="muted">Interactive temperature-aware matrix computation</p></div><span class="badge">SIMULATION MODE</span></header>
+<section class="card">
+<div class="heading"><h2>01 · Temperature Control</h2><strong id="tempValue">45°C</strong></div>
+<input id="temperature" type="range" min="25" max="100" value="45">
+<div class="scale"><span>25°C</span><span>60°C</span><span>75°C</span><span>100°C</span></div>
+<div class="flex"><div><small>Operating state</small><h3 id="state" class="normal">NORMAL</h3><small id="stateDesc">Normal operating range</small></div><div class="right"><small>Selected batch size</small><h2 id="batchSize">4 rows</h2></div></div>
+</section>
+<section class="card">
+<div class="heading"><h2>02 · Matrix Input</h2><button id="sample" class="secondary">Load sample data</button></div>
+<div class="dimensions">
+<label>Rows A <select id="rows"><option>2</option><option>3</option><option>4</option></select></label>
+<label>Shared dimension <select id="shared"><option>2</option><option>3</option><option>4</option></select></label>
+<label>Columns B <select id="cols"><option>2</option><option>3</option><option>4</option></select></label>
+</div>
+<div class="matrices"><div><h3>Matrix A</h3><div id="matrixA" class="grid"></div></div><div><h3>Matrix B</h3><div id="matrixB" class="grid"></div></div></div>
+<button id="random" class="secondary">Generate random matrices</button>
+<p class="hint">The shared dimension ensures that columns in A equal rows in B.</p>
+</section>
+<section class="card">
+<div class="heading"><h2>03 · Computation Engine</h2><span id="engineStatus" class="muted">Ready</span></div>
+<div class="actions"><button id="start" class="primary">▶ Start simulation</button><button id="reset" class="secondary">↺ Reset</button></div>
+<div class="heading progress-label"><span>Processing progress</span><b id="progressText">0%</b></div><div class="track"><div id="progress"></div></div>
+<div class="stats"><div><small>Rows completed</small><b id="doneRows">0/2</b></div><div><small>Batches</small><b id="batchCount">0</b></div><div><small>Temperature</small><b id="tempStat">45°C</b></div></div>
+<p id="activity" class="activity">Waiting for simulation to start.</p>
+</section>
+<section class="card"><h2>04 · Live Computation</h2><p class="hint">Blue indicates processing; green indicates completed rows.</p><div id="rowView" class="rowview">Start the simulation to see processing.</div><h3 class="result-title">Result Matrix (C = A × B)</h3><div id="result" class="grid result">Result will appear here.</div></section>
+<section class="card"><h2>Temperature Rules</h2><div class="rules"><div class="normalbox"><b>NORMAL</b><small>Below 60°C</small><b>4 rows/batch</b></div><div class="warmbox"><b>WARM</b><small>60°C to below 75°C</small><b>2 rows/batch</b></div><div class="hotbox"><b>HOT</b><small>75°C or above</small><b>1 row/batch</b></div></div><p class="hint">Educational simulation only. Temperature is entered manually and is not measured from the CPU. Smaller batches do not guarantee lower hardware temperature or energy use. The mathematical result remains the same.</section>
+<footer>Temperature-Based Matrix Multiplier · PBL Project</footer>
+</main><script src="script.js"></script></body></html>

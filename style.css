@@ -1,0 +1,306 @@
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:#f2f5fa;
+  color:#182238;
+  font:15px/1.5 Arial,sans-serif
+}
+
+.container{
+  width:min(1000px,94%);
+  margin:28px auto
+}
+
+header,.heading,.flex,.actions,.dimensions,.scale{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px
+}
+
+header{margin-bottom:20px}
+
+.eyebrow{
+  font-size:11px;
+  letter-spacing:1.5px;
+  color:#245bd6;
+  font-weight:bold
+}
+
+h1{
+  font-size:clamp(25px,4vw,36px);
+  line-height:1.15;
+  margin:5px 0
+}
+
+h2{font-size:19px;margin:0 0 13px}
+h3{margin:8px 0}
+
+.muted,small,.hint{color:#68758a}
+
+.badge{
+  background:#e8efff;
+  color:#245bd6;
+  border-radius:20px;
+  padding:8px 12px;
+  font-size:11px;
+  font-weight:bold;
+  white-space:nowrap
+}
+
+.card{
+  background:white;
+  border:1px solid #dce3ee;
+  border-radius:14px;
+  padding:20px;
+  margin:15px 0;
+  box-shadow:0 4px 15px #1d355708
+}
+
+.heading{margin-bottom:14px}
+.heading h2{margin:0}
+.heading strong{font-size:26px}
+
+input[type=range]{
+  width:100%;
+  accent-color:#245bd6
+}
+
+.scale{
+  font-size:11px;
+  color:#68758a
+}
+
+.flex{
+  border-top:1px solid #e4e9f1;
+  margin-top:15px;
+  padding-top:13px
+}
+
+.right{text-align:right}
+.normal{color:#188653}
+.warm{color:#b96a08}
+.hot{color:#c33b42}
+
+.dimensions{
+  justify-content:flex-start;
+  flex-wrap:wrap;
+  margin:12px 0 18px
+}
+
+.dimensions label{
+  font-size:13px;
+  font-weight:bold
+}
+
+select{
+  padding:7px;
+  border:1px solid #dce3ee;
+  border-radius:7px;
+  background:white
+}
+
+.matrices{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px
+}
+
+.grid{
+  display:grid;
+  gap:6px;
+  max-width:100%;
+  margin:8px 0 15px
+}
+
+.grid input{
+  width:100%;
+  min-width:0;
+  text-align:center;
+  padding:9px 3px;
+  border:1px solid #dce3ee;
+  border-radius:7px;
+  background:#f8faff;
+  font-size:14px
+}
+
+.secondary,.primary{
+  border:0;
+  border-radius:8px;
+  padding:10px 14px;
+  cursor:pointer;
+  font-weight:bold
+}
+
+.secondary{
+  background:#eef2f8;
+  color:#182238;
+  border:1px solid #dce3ee
+}
+
+.primary{
+  background:#245bd6;
+  color:white
+}
+
+.primary:disabled{
+  opacity:.55;
+  cursor:default
+}
+
+.hint{font-size:12px}
+
+.actions{justify-content:flex-start}
+
+.progress-label{
+  font-size:13px;
+  margin:16px 0 6px
+}
+
+.track{
+  height:11px;
+  background:#edf1f7;
+  border-radius:20px;
+  overflow:hidden
+}
+
+.track div{
+  height:100%;
+  width:0;
+  background:#245bd6;
+  transition:width .3s
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin-top:15px
+}
+
+.stats div{
+  background:#f5f7fb;
+  padding:11px;
+  border-radius:8px;
+  display:flex;
+  flex-direction:column
+}
+
+.stats b{font-size:21px}
+
+.activity{
+  padding:10px;
+  background:#f5f7fb;
+  border-left:3px solid #245bd6;
+  font-size:13px
+}
+
+.rowview{
+  display:grid;
+  gap:7px
+}
+
+.rowitem{
+  display:flex;
+  justify-content:space-between;
+  border:1px solid #dce3ee;
+  border-radius:8px;
+  padding:9px 12px;
+  font-size:13px
+}
+
+.rowitem.processing{
+  background:#eaf0ff;
+  border-color:#245bd6
+}
+
+.rowitem.done{
+  background:#e8f7ef;
+  border-color:#a8dec1
+}
+
+.status{
+  font-size:10px;
+  font-weight:bold;
+  color:#68758a
+}
+
+.done .status{color:#188653}
+.processing .status{color:#245bd6}
+
+.result-title{margin-top:20px}
+
+.result{
+  width:max-content;
+  min-width:140px
+}
+
+.resultcell{
+  text-align:center;
+  padding:10px;
+  border-radius:7px;
+  background:#f1f5fb;
+  font-weight:bold
+}
+
+.rules{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin-top:15px
+}
+
+.rules div{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  padding:13px;
+  border-radius:9px
+}
+
+.rules small{
+  color:inherit;
+  opacity:.8
+}
+
+.normalbox{
+  background:#e8f7ef;
+  color:#188653
+}
+
+.warmbox{
+  background:#fff4df;
+  color:#a75f05
+}
+
+.hotbox{
+  background:#fff0f0;
+  color:#c33b42
+}
+
+footer{
+  text-align:center;
+  color:#68758a;
+  font-size:11px;
+  padding:15px
+}
+
+@media(max-width:620px){
+  header{
+    align-items:flex-start;
+    flex-direction:column
+  }
+
+  .card{padding:15px}
+  .matrices{gap:10px}
+
+  .dimensions{
+    align-items:flex-start;
+    flex-direction:column
+  }
+
+  .rules{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+}
